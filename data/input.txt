@@ -1,0 +1,6 @@
+PLACE 0,0,NORTH
+MOVE
+Right
+place 5,5,south
+MOVE
+REPORT
