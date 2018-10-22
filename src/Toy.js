@@ -4,8 +4,8 @@ module.exports = class Toy {
 
     constructor() {
         this.faceDir = null;
-        this.posX = 0;
-        this.posY = 0;
+        this.posX = null;
+        this.posY = null;
         this.isPlaced = false;
     }
 
@@ -45,7 +45,7 @@ module.exports = class Toy {
         if (!tempDir)
             return 0
         else {
-            this.VALUE = tempDir;
+            this.faceDir.VALUE = tempDir;
             return 1;
         }
     }

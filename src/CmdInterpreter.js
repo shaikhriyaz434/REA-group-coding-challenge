@@ -28,6 +28,9 @@ module.exports = class CmdInterpreter {
 
     genrateRawCmds(input) {
         this.pipeline = input.split(this.cmdSep);
+        this.toy.isPlaced=false;
+        this.toy.posX=null;
+        this.toy.posY=null;
         return 1;
     }
     execute() {
@@ -39,7 +42,7 @@ module.exports = class CmdInterpreter {
                     case CONST.COMMANDS.MOVE:
                         if (this.toy.isPlaced)
                             this.toy.moveTo(this.maxX, this.maxY, this.minX, this.minY);
-                        break;
+                            break;
                     case CONST.COMMANDS.PLACE:
                         let temp = symbols[1].split(',');
                         this.toy.placeTo(temp[0], temp[1], temp[2], this.maxX, this.maxY, this.minX, this.minY);
@@ -57,9 +60,7 @@ module.exports = class CmdInterpreter {
                             });
                         }
                 }
-            } else {
-                console.log("invalid command", cmd);
-            }
+            } 
 
         });
     }
