@@ -7,4 +7,6 @@ place 5,5,south
 MOVE
 move
 left
+left
+move
 REPORT

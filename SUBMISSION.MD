@@ -3,9 +3,18 @@ nodeJS
     --version 8.9 will be preffered
 # run program
 ``` 
-sh bin/run
+sh scripts/run.sh
 ```
 # run test
 ``` 
-sh bin/test
+sh scripts/test.sh
+```
+
+#the output file
+```
+data/output.txt
+```
+#the output file
+```
+data/input.txt
 ```
